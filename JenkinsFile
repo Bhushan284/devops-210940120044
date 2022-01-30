@@ -1,0 +1,14 @@
+node{
+   stage('Code Pull')
+   {
+   git branch: 'main', url: 'https://github.com/Bhushan284/devops210940120044'
+   }
+   stage('Code Compile')
+   {
+   sh 'javac helloworld.java'
+   }
+   stage("Execute Code")
+   {
+   sh 'java helloworld'
+   }
+}
